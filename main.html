@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Academy - Your Career Glow Up Starts Here 💫</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+        }
+
+        @keyframes gradient-x {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(3deg); }
+        }
+        
+        @keyframes glow-pulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(168, 85, 247, 0.8), 0 0 60px rgba(236, 72, 153, 0.4); }
+        }
+
+        @keyframes slide-in {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient-x 15s ease infinite;
+        }
+
+        .glass {
+            background: rgba(17, 24, 39, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glow-text {
+            text-shadow: 0 0 40px rgba(168, 85, 247, 0.6), 0 0 80px rgba(236, 72, 153, 0.4);
+        }
+
+        .neon-border {
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.5), inset 0 0 20px rgba(168, 85, 247, 0.1);
+            border: 2px solid rgba(168, 85, 247, 0.5);
+        }
+
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .accordion-content.active {
+            max-height: 3000px;
+        }
+
+        .emoji-bounce {
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .slide-in {
+            animation: slide-in 0.8s ease-out;
+        }
+
+        .nav-glass {
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(20px);
+        }
+
+        .btn-glow {
+            position: relative;
+            overflow: hidden;
+            animation: glow-pulse 2s ease-in-out infinite;
+        }
+
+        .btn-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-glow:hover::before {
+            left: 100%;
+        }
+
+        .status-badge {
+            animation: wiggle 3s ease-in-out infinite;
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #667eea, #764ba2);
+            border-radius: 10px;
+        }
+
+        /* Particle effect */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(168, 85, 247, 0.6);
+            border-radius: 50%;
+            animation: particle-float 8s infinite;
+        }
+
+        @keyframes particle-float {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 nav-glass">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 rounded-2xl flex items-center justify-center font-black text-2xl shadow-lg shadow-purple-500/50 transform hover:rotate-12 transition">
+                        AI
+                    </div>
+                    <span class="text-2xl font-bold tracking-tight">Academy</span>
+                </div>
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="#why" class="text-gray-300 hover:text-white transition font-medium">Why Us?</a>
+                    <a href="#curriculum" class="text-gray-300 hover:text-white transition font-medium">Curriculum</a>
+                    <a href="#projects" class="text-gray-300 hover:text-white transition font-medium">Projects</a>
+                    <a href="#apply" class="btn-glow bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 px-6 py-3 rounded-full font-bold hover:scale-110 transition transform">
+                        Apply Now 🚀
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="particles" id="particles"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-black to-pink-900/30"></div>
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAyMmMtNS41MjMgMC0xMC00LjQ3Ny0xMC0xMHM0LjQ3Ny0xMCAxMC0xMCAxMCA0LjQ3NyAxMCAxMC00LjQ3NyAxMC0xMCAxMHoiIGZpbGw9IiM2NjdlZWEiIGZpbGwtb3BhY2l0eT0iLjA1Ii8+PC9nPjwvc3ZnPg==')] opacity-20"></div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10 pt-32 pb-20">
+            <div class="slide-in">
+                <div class="inline-flex items-center gap-2 mb-6 px-5 py-2.5 glass rounded-full border border-purple-500/30 status-badge">
+                    <span class="relative flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                    <span class="text-sm font-semibold">Applications Open - 2025 Batch</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-8 tracking-tight">
+                    stop scrolling<br>
+                    start <span class="text-gradient glow-text">building AI</span><br>
+                    your future self will thank you 🤖
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-4 font-medium">
+                    Go from "idk how to code" to shipping AI products in months.
+                </p>
+                <p class="text-lg md:text-xl text-purple-400 max-w-3xl mx-auto mb-10 font-bold">
+                    Real skills. Real projects. Real portfolio. No cap. 💯
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+                    <a href="#apply" class="btn-glow bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 px-10 py-5 rounded-full text-xl font-black hover:scale-110 transition transform shadow-2xl shadow-purple-500/50">
+                        Get Started Free 🔥
+                    </a>
+                    <a href="#curriculum" class="glass px-10 py-5 rounded-full text-xl font-bold hover:bg-white/20 transition border border-purple-500/30">
+                        See What You'll Learn ↓
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-8 md:gap-12">
+                    <div class="flex items-center gap-3">
+                        <span class="text-4xl emoji-bounce">⚡</span>
+                        <div class="text-left">
+                            <p class="text-2xl font-black text-white">17</p>
+                            <p class="text-sm text-gray-400">Modules</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-4xl emoji-bounce" style="animation-delay: 0.2s">🎯</span>
+                        <div class="text-left">
+                            <p class="text-2xl font-black text-white">4</p>
+                            <p class="text-sm text-gray-400">Real Projects</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-4xl emoji-bounce" style="animation-delay: 0.4s">🦙</span>
+                        <div class="text-left">
+                            <p class="text-2xl font-black text-white">100%</p>
+                            <p class="text-sm text-gray-400">GenAI Focused</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-purple-500 rounded-full flex justify-center pt-2">
+                <div class="w-1 h-2 bg-purple-500 rounded-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="why" class="py-32 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                    other bootcamps?<br>
+                    <span class="text-red-500">mid af</span> 🥱
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">let's be real about what's out there...</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+                <!-- Bad Side -->
+                <div class="glass p-10 rounded-3xl border-2 border-red-500/50 hover-lift relative overflow-hidden">
+                    <div class="absolute top-2 right-2 bg-gradient-to-r from-purple-600 to-red-500 text-white px-8 py-3 rounded-full text-xs font-black shadow-lg">
+                        AVOID ❌
+                    </div>
+                    <div class="text-7xl mb-6 emoji-bounce">💀</div>
+                    <h3 class="text-4xl font-black mb-6 text-red-400">Old School Bootcamps</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 bg-red-500/10 rounded-xl">
+                            <span class="text-2xl">😴</span>
+                            <p class="text-lg text-gray-300">Teaching 2018 curriculum in 2025 (bro what?)</p>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-red-500/10 rounded-xl">
+                            <span class="text-2xl">🚫</span>
+                            <p class="text-lg text-gray-300">Zero GenAI content (literally missing the entire point)</p>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-red-500/10 rounded-xl">
+                            <span class="text-2xl">📚</span>
+                            <p class="text-lg text-gray-300">Just theory, no real projects (cool story bro)</p>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-red-500/10 rounded-xl">
+                            <span class="text-2xl">👎</span>
+                            <p class="text-lg text-gray-300">You'll compete with thousands of basic grads</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Good Side -->
+                <div class="neon-border p-10 rounded-3xl hover-lift relative overflow-hidden bg-gradient-to-br from-purple-900/40 via-black to-pink-900/40">
+                    <div class="absolute top-2 right-2 bg-gradient-to-r from-purple-600 to-yellow-500 text-white px-8 py-3 rounded-full text-xs font-black shadow-lg">
+                        THIS IS IT ✨
+                    </div>
+                    <div class="text-7xl mb-6 emoji-bounce" style="animation-delay: 0.3s">🔥</div>
+                    <h3 class="text-4xl font-black mb-6 text-gradient">Our 2025 Stack</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 bg-purple-500/20 rounded-xl border border-purple-500/30">
+                            <span class="text-2xl">🎯</span>
+                            <p class="text-lg text-gray-100 font-semibold">Python → ML → DL → GenAI (the actual 2025 path)</p>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-purple-500/20 rounded-xl border border-purple-500/30">
+                            <span class="text-2xl">🦙</span>
+                            <p class="text-lg text-gray-100 font-semibold">Fine-tune Llama-3, build RAG apps, deploy AI agents</p>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-purple-500/20 rounded-xl border border-purple-500/30">
+                            <span class="text-2xl">💼</span>
+                            <p class="text-lg text-gray-100 font-semibold">4 portfolio projects recruiters actually wanna see</p>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-purple-500/20 rounded-xl border border-purple-500/30">
+                            <span class="text-2xl">🚀</span>
+                            <p class="text-lg text-gray-100 font-semibold">Skills that'll stay relevant (future-proof fr fr)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="mt-20 grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="glass p-8 rounded-2xl text-center hover-lift">
+                    <p class="text-5xl font-black text-gradient mb-2">70%</p>
+                    <p class="text-gray-400">of curriculum is GenAI & LLMs</p>
+                </div>
+                <div class="glass p-8 rounded-2xl text-center hover-lift">
+                    <p class="text-5xl font-black text-gradient mb-2">0→1</p>
+                    <p class="text-gray-400">No prior experience needed</p>
+                </div>
+                <div class="glass p-8 rounded-2xl text-center hover-lift">
+                    <p class="text-5xl font-black text-gradient mb-2">100%</p>
+                    <p class="text-gray-400">Hands-on, project-based</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum -->
+    <section id="curriculum" class="py-32 bg-gradient-to-b from-black via-purple-950/20 to-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <div class="inline-block mb-4 px-4 py-2 glass rounded-full text-sm font-bold border border-purple-500/30">
+                    <span class="text-purple-400">●</span> The Complete Path
+                </div>
+                <h2 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                    from <span class="text-gray-600">"hello world"</span><br>
+                    to <span class="text-gradient">"I built an AI"</span>
+                </h2>
+                <p class="text-2xl text-gray-400 max-w-2xl mx-auto font-bold">17 modules. 7 phases. Zero to hero.</p>
+            </div>
+
+            <div class="max-w-6xl mx-auto space-y-6">
+                <!-- Phase 1 -->
+                <div class="glass rounded-3xl overflow-hidden border border-cyan-500/40 hover-lift">
+                    <button onclick="toggleAccordion(this)" class="w-full p-8 text-left hover:bg-white/5 transition">
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <span class="text-4xl">📊</span>
+                                    <span class="text-3xl font-black">Phase 1: Foundations</span>
+                                    <span class="px-3 py-1 bg-cyan-500/20 rounded-full text-xs font-bold text-cyan-400">START HERE</span>
+                                </div>
+                                <p class="text-gray-400 text-lg ml-16">can't skip leg day, can't skip fundamentals 💪</p>
+                            </div>
+                            <span class="text-4xl text-cyan-400 transition-transform duration-300 transform">›</span>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-8 pt-0 space-y-4">
+                            <div class="ml-16 grid md:grid-cols-3 gap-4">
+                                <div class="p-6 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl border-l-4 border-cyan-500">
+                                    <div class="text-3xl mb-2">🐍</div>
+                                    <h4 class="font-bold text-lg mb-2">Python Basics</h4>
+                                    <p class="text-sm text-gray-400">VS Code, variables, loops, functions. The foundation.</p>
+                                </div>
+                                <div class="p-6 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl border-l-4 border-cyan-500">
+                                    <div class="text-3xl mb-2">📈</div>
+                                    <h4 class="font-bold text-lg mb-2">Stats & Probability</h4>
+                                    <p class="text-sm text-gray-400">The math that actually matters. No boring theory.</p>
+                                </div>
+                                <div class="p-6 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl border-l-4 border-cyan-500">
+                                    <div class="text-3xl mb-2">🐼</div>
+                                    <h4 class="font-bold text-lg mb-2">Data Wrangling</h4>
+                                    <p class="text-sm text-gray-400">NumPy, Pandas, making data look pretty.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 2-5 Combined (Shorter) -->
+                <div class="glass rounded-3xl overflow-hidden border border-purple-500/40 hover-lift">
+                    <button onclick="toggleAccordion(this)" class="w-full p-8 text-left hover:bg-white/5 transition">
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <span class="text-4xl">🤖</span>
+                                    <span class="text-3xl font-black">Phase 2-5: ML → DL → Vision → NLP</span>
+                                </div>
+                                <p class="text-gray-400 text-lg ml-16">the classic AI stack (still important ngl)</p>
+                            </div>
+                            <span class="text-4xl text-purple-400 transition-transform duration-300 transform">›</span>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-8 pt-0">
+                            <div class="ml-16 grid md:grid-cols-2 gap-6">
+                                <div class="p-6 bg-purple-500/10 rounded-2xl border border-purple-500/30">
+                                    <h4 class="font-bold text-xl mb-3 flex items-center gap-2">
+                                        <span>🎯</span> Machine Learning
+                                    </h4>
+                                    <p class="text-gray-400 mb-3">Regression, decision trees, random forests, SVMs. Teach computers to predict stuff.</p>
+                                </div>
+                                <div class="p-6 bg-purple-500/10 rounded-2xl border border-purple-500/30">
+                                    <h4 class="font-bold text-xl mb-3 flex items-center gap-2">
+                                        <span>🧠</span> Deep Learning
+                                    </h4>
+                                    <p class="text-gray-400 mb-3">Neural networks, backprop, optimizers. Brain-inspired AI that actually works.</p>
+                                </div>
+                                <div class="p-6 bg-purple-500/10 rounded-2xl border border-purple-500/30">
+                                    <h4 class="font-bold text-xl mb-3 flex items-center gap-2">
+                                        <span>👁️</span> Computer Vision
+                                    </h4>
+                                    <p class="text-gray-400 mb-3">CNNs, YOLO, OpenCV. Make AI see and understand images & video.</p>
+                                </div>
+                                <div class="p-6 bg-purple-500/10 rounded-2xl border border-purple-500/30">
+                                    <h4 class="font-bold text-xl mb-3 flex items-center gap-2">
+                                        <span>💬</span> NLP
+                                    </h4>
+                                    <p class="text-gray-400 mb-3">RNNs, LSTMs, embeddings. Teach AI to read and understand language.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 6 - HIGHLIGHT -->
+                <div class="neon-border rounded-3xl overflow-hidden hover-lift relative bg-gradient-to-br from-pink-900/40 via-purple-900/40 to-black animate-pulse">
+                    <div class="absolute top-2 right-2 bg-gradient-to-r from-pink-600 to-purple-500 text-white px-6 py-2 rounded-full text-xs font-black shadow-2xl z-10">
+                        MOST VALUABLE 💎
+                    </div>
+                    <button onclick="toggleAccordion(this)" class="w-full p-8 text-left hover:bg-pink-500/10 transition">
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <span class="text-4xl">🚀</span>
+                                    <span class="text-3xl font-black">Phase 6: GenAI & LLMs</span>
+                                    <span class="px-3 py-1 bg-pink-500/30 rounded-full text-xs font-black text-pink-300">🔥 2025 SKILLS</span>
+                                </div>
+                                <p class="text-pink-400 text-lg ml-16 font-bold">this is what everyone's hiring for rn. literally.</p>
+                            </div>
+                            <span class="text-4xl text-pink-400 transition-transform duration-300 transform">›</span>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-8 pt-0">
+                            <div class="ml-16 grid md:grid-cols-2 gap-6">
+                                <div class="p-8 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-2xl border-2 border-pink-500/50">
+                                    <div class="text-4xl mb-3">🤖</div>
+                                    <h4 class="font-black text-2xl mb-3 text-pink-400">Intro to GenAI</h4>
+                                    <p class="text-gray-300 mb-4">Transformers, attention, GPT/LLM architecture. Learn how ChatGPT actually works under the hood.</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-pink-500/30 rounded-full text-xs font-bold">Transformers</span>
+                                        <span class="px-3 py-1 bg-pink-500/30 rounded-full text-xs font-bold">Prompt Engineering</span>
+                                    </div>
+                                </div>
+                                <div class="p-8 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl border-2 border-purple-500/50">
+                                    <div class="text-4xl mb-3">🔗</div>
+                                    <h4 class="font-black text-2xl mb-3 text-purple-400">LangChain & RAG</h4>
+                                    <p class="text-gray-300 mb-4">Build AI agents with memory. Create chatbots that talk to your docs using RAG & vector databases.</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-purple-500/30 rounded-full text-xs font-bold">LangChain</span>
+                                        <span class="px-3 py-1 bg-purple-500/30 rounded-full text-xs font-bold">RAG Systems</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 7 - ADVANCED -->
+                <div class="neon-border rounded-3xl overflow-hidden hover-lift relative bg-gradient-to-br from-purple-900/40 via-black to-orange-900/40">
+                    <div class="absolute top-2 right-2 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white px-6 py-2 rounded-full text-xs font-black shadow-2xl z-10">
+                        GOD MODE 👑
+                    </div>
+                    <button onclick="toggleAccordion(this)" class="w-full p-8 text-left hover:bg-purple-500/10 transition">
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <span class="text-4xl">🦙</span>
+                                    <span class="text-3xl font-black">Phase 7: Advanced LLM Engineering</span>
+                                </div>
+                                <p class="text-orange-400 text-lg ml-16 font-bold">go beyond APIs. build your own models. become the final boss.</p>
+                            </div>
+                            <span class="text-4xl text-orange-400 transition-transform duration-300 transform">›</span>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-8 pt-0">
+                            <div class="ml-16 grid md:grid-cols-2 gap-6">
+                                <div class="p-8 bg-gradient-to-br from-purple-500/20 to-orange-500/20 rounded-2xl border-2 border-purple-500/50">
+                                    <div class="text-4xl mb-3">⚙️</div>
+                                    <h4 class="font-black text-2xl mb-3 text-purple-400">Fine-Tuning LLMs</h4>
+                                    <p class="text-gray-300 mb-4">LoRA, QLoRA. Fine-tune LLMs on your own data. Create domain-specific AI experts with HuggingFace.</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-purple-500/30 rounded-full text-xs font-bold">LoRA/QLoRA</span>
+                                        <span class="px-3 py-1 bg-purple-500/30 rounded-full text-xs font-bold">Fine-tuning</span>
+                                    </div>
+                                </div>
+                                <div class="p-8 bg-gradient-to-br from-orange-500/20 to-purple-500/20 rounded-2xl border-2 border-orange-500/50">
+                                    <div class="text-4xl mb-3">🔒</div>
+                                    <h4 class="font-black text-2xl mb-3 text-orange-400">Local LLMs & Ollama</h4>
+                                    <p class="text-gray-300 mb-4">Run models locally. GGUF quantization. Privacy-first AI. Zero API costs. Full control.</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-orange-500/30 rounded-full text-xs font-bold">Ollama</span>
+                                        <span class="px-3 py-1 bg-orange-500/30 rounded-full text-xs font-bold">Local Models</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-32 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-pink-900/20"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-20">
+                <div class="inline-block mb-4 px-4 py-2 glass rounded-full text-sm font-bold border border-pink-500/30">
+                    <span class="text-pink-400">●</span> Portfolio That Slaps
+                </div>
+                <h2 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                    certificates? <span class="line-through text-gray-600">cringe</span><br>
+                    real projects? <span class="text-gradient">based</span> 💪
+                </h2>
+                <p class="text-2xl text-gray-400 max-w-2xl mx-auto">portfolio projects that'll make recruiters slide into your DMs</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+                <!-- Project 1 -->
+                <div class="glass rounded-3xl p-8 hover-lift border border-blue-500/30 relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="text-6xl emoji-bounce">🤖</span>
+                            <span class="px-3 py-1 bg-blue-500/20 rounded-full text-xs font-bold text-blue-400">MACHINE LEARNING</span>
+                        </div>
+                        <h3 class="text-2xl font-black mb-3">Classic ML Projects</h3>
+                        <p class="text-gray-400 mb-6">Build real-world ML models. Prediction systems, classification, clustering. Master the fundamentals that power everything.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-900/50 rounded-full text-xs font-semibold border border-blue-500/30">Scikit-Learn</span>
+                            <span class="px-3 py-1 bg-blue-900/50 rounded-full text-xs font-semibold border border-blue-500/30">Pandas</span>
+                            <span class="px-3 py-1 bg-blue-900/50 rounded-full text-xs font-semibold border border-blue-500/30">NumPy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass rounded-3xl p-8 hover-lift border border-purple-500/30 relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="text-6xl emoji-bounce" style="animation-delay: 0.2s">🧠</span>
+                            <span class="px-3 py-1 bg-purple-500/20 rounded-full text-xs font-bold text-purple-400">DEEP LEARNING</span>
+                        </div>
+                        <h3 class="text-2xl font-black mb-3">Neural Network Applications</h3>
+                        <p class="text-gray-400 mb-6">Build deep learning models from scratch. Image classifiers, time series forecasting. Real neural networks in action.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-900/50 rounded-full text-xs font-semibold border border-purple-500/30">TensorFlow</span>
+                            <span class="px-3 py-1 bg-purple-900/50 rounded-full text-xs font-semibold border border-purple-500/30">PyTorch</span>
+                            <span class="px-3 py-1 bg-purple-900/50 rounded-full text-xs font-semibold border border-purple-500/30">Keras</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 - HIGHLIGHT -->
+                <div class="neon-border rounded-3xl p-10 hover-lift relative overflow-hidden bg-gradient-to-br from-purple-900/40 to-pink-900/40 md:col-span-2">
+                    <div class="absolute top-3 right-3 bg-gradient-to-r from-purple-600 to-pink-500text-white px-6 py-2 rounded-full text-xs font-black shadow-2xl z-10">
+                    RECRUITER MAGNET 🧲
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="flex items-start gap-4 mb-4">
+                                <span class="text-7xl emoji-bounce" style="animation-delay: 0.4s">🧠</span>
+                                <span class="px-3 py-1 bg-purple-500/30 rounded-full text-xs font-bold text-purple-300">RAG PROJECT</span>
+                            </div>
+                            <h3 class="text-3xl font-black mb-4">Second Brain Document Bot</h3>
+                            <p class="text-gray-300 text-lg mb-6">RAG-powered AI assistant that reads your PDFs, remembers everything, and answers questions with perfect citations. Vector search + LangChain. This one hits different.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-purple-900/50 rounded-full text-sm font-bold border-2 border-purple-500/50">LangChain</span>
+                                <span class="px-4 py-2 bg-purple-900/50 rounded-full text-sm font-bold border-2 border-purple-500/50">Pinecone</span>
+                                <span class="px-4 py-2 bg-purple-900/50 rounded-full text-sm font-bold border-2 border-purple-500/50">RAG</span>
+                                <span class="px-4 py-2 bg-purple-900/50 rounded-full text-sm font-bold border-2 border-purple-500/50">Vector DB</span>
+                            </div>
+                        </div>
+                        <div class="glass p-6 rounded-2xl border border-purple-500/30">
+                            <p class="text-sm text-purple-400 font-bold mb-2">💡 Why this matters:</p>
+                            <ul class="space-y-2 text-gray-400 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-purple-400 mt-1">→</span>
+                                    <span>RAG is THE most in-demand GenAI skill</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-purple-400 mt-1">→</span>
+                                    <span>Shows you understand LLM limitations</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-purple-400 mt-1">→</span>
+                                    <span>Proves you can build production systems</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-purple-400 mt-1">→</span>
+                                    <span>Will carry your entire portfolio tbh</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="neon-border rounded-3xl p-10 hover-lift relative overflow-hidden bg-gradient-to-br from-pink-900/40 to-orange-900/40 md:col-span-2">
+                    <div class="absolute top-3 right-3 bg-gradient-to-r from-pink-600 to-orange-500 text-white px-6 py-2 rounded-full text-xs font-black shadow-2xl z-10">
+                        FINAL BOSS 👑
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="flex items-start gap-4 mb-4">
+                                <span class="text-7xl emoji-bounce" style="animation-delay: 0.6s">🏥</span>
+                                <span class="px-3 py-1 bg-pink-500/30 rounded-full text-xs font-bold text-pink-300">FINE-TUNING</span>
+                            </div>
+                            <h3 class="text-3xl font-black mb-4">Specialized AI Assistant</h3>
+                            <p class="text-gray-300 text-lg mb-6">Fine-tune LLMs on domain-specific data (medical, legal, finance). QLoRA optimization. Create your own custom AI expert. This is endgame content.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-pink-900/50 rounded-full text-sm font-bold border-2 border-pink-500/50">LLMs</span>
+                                <span class="px-4 py-2 bg-pink-900/50 rounded-full text-sm font-bold border-2 border-pink-500/50">QLoRA</span>
+                                <span class="px-4 py-2 bg-pink-900/50 rounded-full text-sm font-bold border-2 border-pink-500/50">HuggingFace</span>
+                                <span class="px-4 py-2 bg-pink-900/50 rounded-full text-sm font-bold border-2 border-pink-500/50">Fine-tuning</span>
+                            </div>
+                        </div>
+                        <div class="glass p-6 rounded-2xl border border-pink-500/30">
+                            <p class="text-sm text-pink-400 font-bold mb-2">🔥 Flex level:</p>
+                            <ul class="space-y-2 text-gray-400 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-pink-400 mt-1">→</span>
+                                    <span>Less than 1% of "AI engineers" can do this</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-pink-400 mt-1">→</span>
+                                    <span>Shows deep understanding of LLM internals</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-pink-400 mt-1">→</span>
+                                    <span>Opens doors to research positions</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-pink-400 mt-1">→</span>
+                                    <span>Instant conversation starter in interviews</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="py-32 bg-gradient-to-b from-black via-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-7xl font-black mb-6">
+                    the tech stack<br>
+                    that actually <span class="text-gradient">matters</span>
+                </h2>
+                <p class="text-xl text-gray-400">12 tools. infinite possibilities. 💎</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-7xl mx-auto mb-16">
+                <div class="glass p-8 rounded-2xl hover-lift text-center group border border-blue-500/20 hover:border-blue-500/60 transition">
+                    <div class="text-6xl mb-3 group-hover:scale-125 transition duration-300 emoji-bounce">🐍</div>
+                    <p class="font-bold">Python</p>
+                    <p class="text-xs text-gray-500 mt-1">The foundation</p>
+                </div>
+                <div class="glass p-8 rounded-2xl hover-lift text-center group border border-cyan-500/20 hover:border-cyan-500/60 transition">
+                    <div class="text-6xl mb-3 group-hover:scale-125 transition duration-300 emoji-bounce" style="animation-delay: 0.1s">🐼</div>
+                    <p class="font-bold">Pandas</p>
+                    <p class="text-xs text-gray-500 mt-1">Data wrangling</p>
+                </div>
+                <div class="glass p-8 rounded-2xl hover-lift text-center group border border-purple-500/20 hover:border-purple-500/60 transition">
+                    <div class="text-6xl mb-3 group-hover:scale-125 transition duration-300 emoji-bounce" style="animation-delay: 0.2s">🤖</div>
+                    <p class="font-bold">Scikit-Learn</p>
+                    <p class="text-xs text-gray-500 mt-1">Classic ML</p>
+                </div>
+                <div class="glass p-8 rounded-2xl hover-lift text-center group border border-orange-500/20 hover:border-orange-500/60 transition">
+                    <div class="text-6xl mb-3 group-hover:scale-125 transition duration-300 emoji-bounce" style="animation-delay: 0.3s">🔥</div>
+                    <p class="font-bold">TensorFlow</p>
+                    <p class="text-xs text-gray-500 mt-1">Deep learning</p>
+                </div>
+                <div class="glass p-8 rounded-2xl hover-lift text-center group border border-red-500/20 hover:border-red-500/60 transition">
+                    <div class="text-6xl mb-3 group-hover:scale-125 transition duration-300 emoji-bounce" style="animation-delay: 0.4s">⚡</div>
+                    <p class="font-bold">PyTorch</p>
+                    <p class="text-xs text-gray-500 mt-1">Modern DL</p>
+                </div>
+                <div class="glass p-8 rounded-2xl hover-lift text-center group border border-blue-500/20 hover:border-blue-500/60 transition">
+                    <div class="text-6xl mb-3 group-hover:scale-125 transition duration-300 emoji-bounce" style="animation-delay: 0.5s">👁️</div>
+                    <p class="font-bold">OpenCV</p>
+                    <p class="text-xs text-gray-500 mt-1">Computer vision</p>
+                </div>
+                <div class="neon-border p-8 rounded-2xl hover-lift text-center group bg-gradient-to-br from-yellow-900/20 to-orange-900/20">
+                    <div class="text-6xl mb-3 group-hover:scale-125 transition duration-300 emoji-bounce" style="animation-delay: 0.6s">🤗</div>
+                    <p class="font-bold">HuggingFace</p>
+                    <p class="text-xs text-yellow-400 mt-1">LLM hub 🔥</p>
+                </div>
+                <div class="neon-border p-8 rounded-2xl hover-lift text-center group bg-gradient-to-br from-green-900/20 to-emerald-900/20">
+                    <div class="text-6xl mb-3 group-hover:scale-125 transition duration-300 emoji-bounce" style="animation-delay: 0.7s">🔗</div>
+                    <p class="font-bold">LangChain</p>
+                    <p class="text-xs text-green-400 mt-1">AI agents 🔥</p>
+                </div>
+                <div class="neon-border p-8 rounded-2xl hover-lift text-center group bg-gradient-to-br from-purple-900/20 to-pink-900/20">
+                    <div class="text-6xl mb-3 group-hover:scale-125 transition duration-300 emoji-bounce" style="animation-delay: 0.8s">🦙</div>
+                    <p class="font-bold">Ollama</p>
+                    <p class="text-xs text-purple-400 mt-1">Local LLMs 🔥</p>
+                </div>
+                <div class="neon-border p-8 rounded-2xl hover-lift text-center group bg-gradient-to-br from-cyan-900/20 to-blue-900/20">
+                    <div class="text-6xl mb-3 group-hover:scale-125 transition duration-300 emoji-bounce" style="animation-delay: 0.9s">📌</div>
+                    <p class="font-bold">Pinecone</p>
+                    <p class="text-xs text-cyan-400 mt-1">Vector DB 🔥</p>
+                </div>
+                <div class="glass p-8 rounded-2xl hover-lift text-center group border border-orange-500/20 hover:border-orange-500/60 transition">
+                    <div class="text-6xl mb-3 group-hover:scale-125 transition duration-300 emoji-bounce" style="animation-delay: 1s">📓</div>
+                    <p class="font-bold">Jupyter</p>
+                    <p class="text-xs text-gray-500 mt-1">Notebooks</p>
+                </div>
+                <div class="glass p-8 rounded-2xl hover-lift text-center group border border-gray-500/20 hover:border-gray-500/60 transition">
+                    <div class="text-6xl mb-3 group-hover:scale-125 transition duration-300 emoji-bounce" style="animation-delay: 1.1s">🐳</div>
+                    <p class="font-bold">Docker</p>
+                    <p class="text-xs text-gray-500 mt-1">Deployment</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <p class="text-gray-400 text-lg mb-4">🔥 marked tools = the money makers in 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Lead Form -->
+    <section id="apply" class="py-32 relative overflow-hidden">
+        <div class="absolute inset-0 gradient-bg opacity-40"></div>
+        <div class="absolute inset-0 bg-black/50"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl md:text-7xl font-black mb-6 leading-tight glow-text">
+                        ready to level up?<br>
+                        let's <span class="text-gradient">goooo</span> 🚀
+                    </h2>
+                    <p class="text-2xl text-gray-300 font-medium">Get the full curriculum + career roadmap + class schedule</p>
+                    <p class="text-xl text-purple-400 mt-2">Free. No spam. Just vibes. ✨</p>
+                </div>
+
+                <div class="neon-border p-10 md:p-16 rounded-3xl shadow-2xl bg-gradient-to-br from-purple-900/30 via-black to-pink-900/30">
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold mb-3 text-gray-300">what's your name? *</label>
+                                <input type="text" required placeholder="John Doe" class="w-full px-6 py-4 rounded-xl bg-black/50 border-2 border-gray-700 focus:border-purple-500 focus:outline-none transition text-lg">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-3 text-gray-300">your email *</label>
+                                <input type="email" required placeholder="john@example.com" class="w-full px-6 py-4 rounded-xl bg-black/50 border-2 border-gray-700 focus:border-purple-500 focus:outline-none transition text-lg">
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold mb-3 text-gray-300">whatsapp number *</label>
+                                <input type="tel" required placeholder="+91 98765 43210" class="w-full px-6 py-4 rounded-xl bg-black/50 border-2 border-gray-700 focus:border-purple-500 focus:outline-none transition text-lg">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-3 text-gray-300">current vibe *</label>
+                                <select required class="w-full px-6 py-4 rounded-xl bg-black/50 border-2 border-gray-700 focus:border-purple-500 focus:outline-none transition text-lg">
+                                    <option value="">pick one...</option>
+                                    <option value="student">student 🎓</option>
+                                    <option value="developer">already coding 💻</option>
+                                    <option value="professional">9-5 grind 💼</option>
+                                    <option value="career-change">career switch mode 🔄</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold mb-3 text-gray-300">main goal? *</label>
+                            <select required class="w-full px-6 py-4 rounded-xl bg-black/50 border-2 border-gray-700 focus:border-purple-500 focus:outline-none transition text-lg">
+                                <option value="">what are you after?</option>
+                                <option value="job">land a high-paying AI job 💰</option>
+                                <option value="freelance">freelance & side hustle 🚀</option>
+                                <option value="upskill">upskill for promotion 📈</option>
+                                <option value="startup">build my own AI startup 🦄</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full btn-glow bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 py-6 rounded-xl text-2xl font-black hover:scale-105 transition transform shadow-2xl">
+                            unlock the goods 🔓
+                        </button>
+
+                        <p class="text-center text-sm text-gray-500 mt-4">
+                            we'll hit you up with the details. no cap, no spam. 🤝
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Trust Signals -->
+                <div class="mt-16 grid md:grid-cols-4 gap-6">
+                    <div class="glass p-6 rounded-2xl text-center hover-lift">
+                        <div class="text-4xl mb-2 emoji-bounce">⚡</div>
+                        <p class="text-sm text-gray-400">instant access</p>
+                    </div>
+                    <div class="glass p-6 rounded-2xl text-center hover-lift">
+                        <div class="text-4xl mb-2 emoji-bounce" style="animation-delay: 0.2s">🎯</div>
+                        <p class="text-sm text-gray-400">career roadmap</p>
+                    </div>
+                    <div class="glass p-6 rounded-2xl text-center hover-lift">
+                        <div class="text-4xl mb-2 emoji-bounce" style="animation-delay: 0.4s">📅</div>
+                        <p class="text-sm text-gray-400">class schedule</p>
+                    </div>
+                    <div class="glass p-6 rounded-2xl text-center hover-lift">
+                        <div class="text-4xl mb-2 emoji-bounce" style="animation-delay: 0.6s">💎</div>
+                        <p class="text-sm text-gray-400">totally free</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-32 bg-gradient-to-b from-black via-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-7xl font-black mb-6">
+                    wait, you probably have<br>
+                    <span class="text-gradient">questions</span> 🤔
+                </h2>
+                <p class="text-xl text-gray-400">we got you. here's the tea.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-4">
+                <!-- FAQ 1 -->
+                <div class="glass rounded-2xl overflow-hidden border border-purple-500/30 hover-lift">
+                    <button onclick="toggleAccordion(this)" class="w-full p-8 text-left hover:bg-white/5 transition">
+                        <div class="flex justify-between items-start gap-4">
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2">do I need to be good at math? 🧮</h3>
+                                <p class="text-sm text-gray-500">spoiler: probably not</p>
+                            </div>
+                            <span class="text-3xl text-purple-400 transition-transform duration-300">+</span>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 pb-8 text-gray-400">
+                            <p class="mb-3">Nah fr. We teach all the necessary stats from scratch. We focus on intuition and code, not complex proofs.</p>
+                            <p>If you can do basic arithmetic (literally just +, -, ×, ÷), you're good. We'll handle the rest. Most "AI requires advanced math" is gatekeeping tbh.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="glass rounded-2xl overflow-hidden border border-purple-500/30 hover-lift">
+                    <button onclick="toggleAccordion(this)" class="w-full p-8 text-left hover:bg-white/5 transition">
+                        <div class="flex justify-between items-start gap-4">
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2">do I need an expensive setup? 💻</h3>
+                                <p class="text-sm text-gray-500">your laptop is probably fine</p>
+                            </div>
+                            <span class="text-3xl text-purple-400 transition-transform duration-300">+</span>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 pb-8 text-gray-400">
+                            <p class="mb-3">Not even close. We use Google Colab (free) for heavy model training. Any laptop from the last 5 years works.</p>
+                            <p>That M1 MacBook Air? Perfect. Your old Windows laptop? Also perfect. Even a Chromebook can work for most stuff. No RTX 4090 needed lol.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="glass rounded-2xl overflow-hidden border border-purple-500/30 hover-lift">
+                    <button onclick="toggleAccordion(this)" class="w-full p-8 text-left hover:bg-white/5 transition">
+                        <div class="flex justify-between items-start gap-4">
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2">why should I trust you over other bootcamps? 👀</h3>
+                                <p class="text-sm text-gray-500">fair question ngl</p>
+                            </div>
+                            <span class="text-3xl text-purple-400 transition-transform duration-300">+</span>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 pb-8 text-gray-400">
+                            <p class="mb-3">Most bootcamps teach you regression and decision trees, then dip. We go all the way to GenAI, LLMs, RAG, and fine-tuning—literally the skills companies are hiring for RIGHT NOW.</p>
+                            <p class="mb-3">We dedicate 30% of the curriculum to GenAI. Most courses? 0%. We're not stuck in 2018.</p>
+                            <p>Plus you build 4 real portfolio projects, not toy examples. That Second Brain RAG project alone will carry your portfolio.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="glass rounded-2xl overflow-hidden border border-purple-500/30 hover-lift">
+                    <button onclick="toggleAccordion(this)" class="w-full p-8 text-left hover:bg-white/5 transition">
+                        <div class="flex justify-between items-start gap-4">
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2">I'm not from tech. can I still do this? 🤷</h3>
+                                <p class="text-sm text-gray-500">yes bestie</p>
+                            </div>
+                            <span class="text-3xl text-purple-400 transition-transform duration-300">+</span>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 pb-8 text-gray-400">
+                            <p class="mb-3">100%. We literally start from "how to install VS Code." We've had students from finance, marketing, design, healthcare—you name it.</p>
+                            <p>The only requirement is being willing to put in the work. If you can follow instructions and Google stuff (which you clearly can since you're here), you'll be fine. We got you.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="glass rounded-2xl overflow-hidden border border-purple-500/30 hover-lift">
+                    <button onclick="toggleAccordion(this)" class="w-full p-8 text-left hover:bg-white/5 transition">
+                        <div class="flex justify-between items-start gap-4">
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2">will this actually get me a job? 💼</h3>
+                                <p class="text-sm text-gray-500">keeping it 100</p>
+                            </div>
+                            <span class="text-3xl text-purple-400 transition-transform duration-300">+</span>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 pb-8 text-gray-400">
+                            <p class="mb-3">Real talk: Anyone who guarantees you a job is lying. We're not about that cap.</p>
+                            <p class="mb-3">What we CAN guarantee: You'll have a fire portfolio with 4 real AI projects, skills in the hottest tech stack (GenAI, LLMs, RAG, fine-tuning), and the knowledge to actually talk tech in interviews.</p>
+                            <p>The curriculum is built around what companies are hiring for in 2025. The rest depends on you—your hustle, your networking, your interview skills. But we give you everything you need to compete. No cap.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="glass rounded-2xl overflow-hidden border border-purple-500/30 hover-lift">
+                    <button onclick="toggleAccordion(this)" class="w-full p-8 text-left hover:bg-white/5 transition">
+                        <div class="flex justify-between items-start gap-4">
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2">is AI gonna take over and make this useless? 🤖</h3>
+                                <p class="text-sm text-gray-500">valid concern</p>
+                            </div>
+                            <span class="text-3xl text-purple-400 transition-transform duration-300">+</span>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 pb-8 text-gray-400">
+                            <p class="mb-3">Bro. The people building AI will be the last ones replaced by AI. That's literally you if you take this course.</p>
+                            <p class="mb-3">Instead of being afraid of AI taking jobs, you'll be the one MAKING the AI. Big difference.</p>
+                            <p>Plus we teach you to build, fine-tune, and deploy models—skills that'll stay relevant as AI evolves. You're learning to ride the wave, not get drowned by it. 🌊</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-32 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-black to-pink-900/30"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl md:text-7xl font-black mb-8 leading-tight">
+                    still here?<br>
+                    <span class="text-gradient glow-text">let's do this</span> 💪
+                </h2>
+                <p class="text-2xl text-gray-300 mb-12">applications close soon. don't sleep on this.</p>
+                <a href="#apply" class="inline-block btn-glow bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 px-12 py-6 rounded-full text-2xl font-black hover:scale-110 transition transform shadow-2xl shadow-purple-500/50">
+                    apply now 🚀
+                </a>
+                <p class="text-gray-500 mt-6 text-sm">limited spots. first come, first served.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-800 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 rounded-2xl flex items-center justify-center font-black text-2xl shadow-lg shadow-purple-500/50">
+                        AI
+                    </div>
+                    <div>
+                        <p class="text-xl font-bold">Academy</p>
+                        <p class="text-xs text-gray-500">Future-proof your career</p>
+                    </div>
+                </div>
+                <div class="flex gap-8 text-sm text-gray-400">
+                    <a href="#" class="hover:text-purple-400 transition">Privacy</a>
+                    <a href="#" class="hover:text-purple-400 transition">Terms</a>
+                    <a href="#" class="hover:text-purple-400 transition">Contact</a>
+                </div>
+            </div>
+            <div class="text-center text-gray-600 text-sm">
+                <p>© 2025 AI Academy. All rights reserved.</p>
+                <p class="mt-2">Built with 💜 for the next generation of AI engineers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Particle effect
+        function createParticles() {
+            const container = document.getElementById('particles');
+            if (!container) return;
+            
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        // Accordion toggle
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('span:last-child');
+            const allContents = document.querySelectorAll('.accordion-content');
+            const allIcons = document.querySelectorAll('.accordion-content').forEach((item, index) => {
+                const btn = item.previousElementSibling;
+                const ic = btn.querySelector('span:last-child');
+                if (item !== content && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                    ic.textContent = '+';
+                    ic.style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            content.classList.toggle('active');
+            if (content.classList.contains('active')) {
+                icon.textContent = '−';
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.textContent = '+';
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const button = this.querySelector('button[type="submit"]');
+                const originalText = button.textContent;
+                button.textContent = 'sending... 📨';
+                button.disabled = true;
+                
+                setTimeout(() => {
+                    button.textContent = 'sent! check your email 🎉';
+                    setTimeout(() => {
+                        alert('🎉 Yooo! Check your email for the full curriculum, career roadmap, and class schedule!\n\nWe just sent you everything. If you don\'t see it, check spam (our emails sometimes end up there for some reason lol).\n\nSee you in class! 💪');
+                        button.textContent = originalText;
+                        button.disabled = false;
+                        form.reset();
+                    }, 2000);
+                }, 1500);
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            
+            // Observe elements for animations
+            document.querySelectorAll('.hover-lift').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+
+        // Mobile menu toggle (basic)
+        document.querySelector('nav button')?.addEventListener('click', function() {
+            alert('Mobile menu coming soon! For now, scroll down to explore 👇');
+        });
+    </script>
+</body>
+</html>
